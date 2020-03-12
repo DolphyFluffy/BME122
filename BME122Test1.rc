@@ -1,0 +1,135 @@
+TEST #1//////////////////////////////////////////////////////////
+- Software Testing
+- Logic error/Fault/Bug
+- Run-time error
+- software falire
+- syntax error
+- compiler warning
+- Test Case
+   - input values
+   - preconditions and post conditions
+   - exepcted results
+   developed for an objective or test condition
+   
+Naming
+- constants: upper snake notation (PI_VALUE)
+- variables: lower snake notation (my_int)
+	- assigning values
+		- int my_first_int = 5;
+		- int my_second_int(7);
+		
+Precision
+- Set to fixed precision - cout.setf(ios::fixed);
+- Always shouw point - cout.setf(ios::showpoint);
+- 2 decimal precision - cout.precision(2);	//change to however many digits you want
+
+Data Types
+- Boolean (bool) evluates to true (1) or false (0)
+- Character (char) char c = 'a' or char b = 34 (encoding in ASCII)
+- Integer (int) temp_celcius = 5*9;
+	- can be cast to booleans explicity
+		- non-zero value = true
+		- zero value = false
+- Double (double) temp_kelvin = 4.6;
+- String (string) string s1 = "my string";	string s2 = s1 + "type";	//concatenates
+- data types must match in an assingment, otherwise it wont work
+- Constants (const) USER_CODE = 'B';	//defined, literal values so the code is self-documenting
+
+CONTROL FLOW-----------------------------------------------------------------------------------------
+- if/else statements			//can use ++, !=, <, <=, >, >=
+	if(<boolean_expression>)	//can combine with &&, ||, !(inverts bool value)
+		<true_statement>;
+	else
+		<false_statement>;
+- order
+	- arthitmetic before locial operators (comparison and boolean)
+- brackets
+	- define the scope (what is viewed by the code)
+	- variables outside can be visible inside, but not vice versa
+	- not necessary of one statement
+- use boolean values rather than nested code for readibility
+- switch statements
+	switch(<expression>)
+		case 'a':
+			cout << 1;
+		case 'b':
+			cout << 2;
+- Terenary (conditional) Operator
+	- (condition? true-val:false-val)
+	- (in1 > 5 ? "in! is greater than 5" : "in1 is not greater than 5")
+	
+FUNCTIONS--------------------------------------------------------------------------------------------
+- seperte subparts of a program tat perform specific subtasks
+- define wita self descriptive name
+- modularization - organize code into reusable modules
+- refactoring: improving code structure (readabliltiy) wthot chagine externally observed behavior)
+- Syntax (Declaration)
+	- placed before any calls made
+	return type function_name(parameter1, parameter2);
+	//PURPOSE: function descirpin
+		//Inputs: inputs description
+		//Outputs: outputs description
+- Syntax (Definition)
+	- imlementation; usuanly fter the main() function
+	int compute_cents_value(int toonies, int loonies, int quarters) {
+		...
+	}
+- Fucntion call
+	- sum = compute_cents_value(toonies, loonies, quarters)	//# and order msut match declaration
+	- can return different data tupes; i.e. bool and void
+	- bool do_values_match(int val1, int val2) {
+		return(val1 >= val2 || val1*2 >= val2)
+	}
+- Local variables
+	- only accesible to rucntion and better to control data
+- global variba;es
+	- declared outside bodu of function in file
+	- ok for constants
+	- shuould not be used
+- Call by Value(type variable): copy is passed as an argument to fucntion //won't change orgininal values
+- Call by Refernece(type& variable): adress of actuatl arguement passed
+	- saves time and space; no need to copy
+	- prevent writing by puting const before parameter declaration void demo_function(const int& val1)
+- Overloading
+	- use the sme function name but with a different parameter list
+	- void demo_function(int_val1, int_val2);
+	- void demo_function(int_val1, int_val2, int val_3)
+	- abpid ambigupus overloading, where muliple functions may apply to the same fucntion call
+- Procesural Abstraction
+	- knoq qhta ucntion does but ot how to use it (hidden from user)
+	- information hiding: detils of how data is manipulated withon a module are not nown to its user
+- Testing
+	- cout statments to trace exectution (i.e. near f(x) calls, definitions)
+	- use compiler debugger
+	- aseert macros
+	- stubs ad drivers
+	
+READ TO
+- Vecotrs & Arrays
+- Strucys and classes
+	
+
+•	(1) Use core syntax to develop basic code blocks
+•	(2) Implement simple algorithms as part of detailed software design 
+o	Preparation including Sample Questions: 
+Complete a number of exercises from Review-Digital-Computation-Exercises
+ 
+o	Review: Corresponding sections from Review-Digital-Computation-Basics 
+o	Focus on the following: 
+?	C/C++ Basics (i.e., #include statements, using statement, basic data type declaration and usage including bool, int, char, double)
+?	C/C++ Control Flow (i.e., if/else statements, built-in operators, for{} loops, while and do-while loops)
+?	C/C++ Functions (i.e., declaring and invoking functions, recognizing the difference between main() and other functions)
+ 
+•	(3) Use C++ classes and vectors to solve simple software design problems 
+o	Preparation including Sample Questions:
+?	Q5 and Q6 from Review-Activity1-Introduction
+?	Q1 and Q2 from Review-Activity2-Class-Constructors
+?	Q1 and Q2 from BME122-TutorialNotes#0-Exercises
+ 
+o	Read: Corresponding sections from BME122-TutorialNotes#0-Review-OOD-in-C++
+o	Focus on the following: 
+?	C/C++ Vectors and Arrays (i.e., initializing vectors and arrays, element access using [] syntax, inserting and removing from vectors)
+?	C/C++ Structs and Classes (i.e., private/public visibility, class constructors, getters and setters, creating and using objects)
+ 
+Overall, the objectives of this quiz are (1) to incentivize timely preparation of the course material and (2) to encourage further development of basic coding skills. I hope you have fun preparing for the quiz.
+
